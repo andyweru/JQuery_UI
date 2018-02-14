@@ -1,130 +1,178 @@
 /* styles.css */
 
 body {
-    text-align: center;
+    background: #eee;
 }
 
-#box {
-    height: 200px;
-    width: 200px;
-    background: #fc3;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 200px;
-}
-
-.thing {
-    height: 200px;
-    width: 200px;
-    background: #ac3;
-    margin: 20px auto;
-    text-align: center;
-    line-height: 200px;
-    border-top-left-radius: 200px;
-}
-
-button {
-    background: #933;
-    color: white;
-    padding: 10px;
-    border: solid 2px black;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-body#selectors {
-    text-align: left;
-}
-
-body#events {
-    width: 500px;
-    margin: 0 auto;
-}
-
-form input {
-    display: inline-block;
-    margin: 10px 0;
-}
-
-
-#racetrack {
-    background: url('../img/road.jpg') center left repeat-x;
-    height: 330px;
-    border-right: dashed 10px white;
-    box-sizing: border-box;
-    margin: 40px 0;
-}
-
-.car {
-    display: block;
+.container {
     position: relative;
+    width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid 1px #ccc;
 }
 
-#car1 { top: 30px; }
-#car2 { top: 100px; }
-
-#raceInfoContainer {
-    width: 80%;
-    margin: 40px auto 0;
-    background: #333;
-    height: 200px;
-}
-
-#raceInfoContainer h2 {
-    color: white;
-    text-transform: uppercase;
-    border-bottom: solid 1px white;
-    padding: 20px 0;
-}
-
-.raceInfo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    width: 50%;
-    float: left;
-}
-
-.raceInfo span {
-    display: block;
-    font-weight: normal;
-    font-size: 18px;
-    color: white;
-}
-
-#raceInfo1 {
-    color: #77b82f;
-}
-
-#raceInfo2 {
-    color: #b82f3e;
-}
-
-input[type="button"] {
-    background: #77b72f;
-    color: white;
-    padding: 10px 20px;
-    border: solid 1px #444;
-}
-
-input#reset {
-    background: #fc3;
-    color: #444;
-}
-
-.clearfix:after {
-    content:"";
+.container:after {
     display: table;
+    content: "";
     clear: both;
 }
 
+.fixedContainer {
+    /* fixed height container
+       with overflow for scrollbar
+    */
+    height: 400px;
+    overflow: auto;
+}
+    
+.box {
+    height: 120px;
+    width: 120px;
+    background: #000;
+    color: white;
+    line-height: 120px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
 
+#box1 { background: #38c; }
+#box2 { background: #9d9; }
+#box3 { background: #c27; }
 
+#droppable {
+    background: #222;
+    border: solid 2px #000;
+    height: 300px;
+    width: 400px;
+    line-height: 300px;
+    text-align: center;
+    color: white;
+    margin: 40px auto;
+}
 
+ul {
+    width: 48%;
+    float: left;
+    margin: 0;
+    padding: 0 1%;
+    list-style: none;
+}
 
+ul li {
+    background: #eee;
+    padding: 10px;
+    margin: 2px 0;
+    border: solid 1px #ccc;
+}
 
+ul li:hover {
+    background: #ddd;
+    border-color: #aaa;
+    cursor: pointer;
+}
 
+ul li:active {
+    transform: rotate(2deg);
+    background: #ccc;
+    border-color: #999;
+    box-shadow: 0 10px -4px #111;
+}
 
+.placeholderBox {
+    background: #fc3;
+    height: 20px;
+    border: dashed 2px #777;
+}
+
+/* ---------
+   TODO LIST
+   --------- */
+
+#todoListWrapper {
+    width: 960px;
+    text-align: center;
+}
+
+#todoList:after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+#todoList ul {
+    width: 14.28%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#todoList li {
+    background: none;
+    padding: 5px;
+    border: none;
+    margin: 0;
+    text-align: left;
+    font-size: 12px;
+}
+
+#todoList li:hover {
+    background: #eee;
+}
+
+#todoList li.listTitle {
+    background: #444;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-right: solid 1px white;
+    font-size: 14px;
+}
+
+#todoList li.listTitle:hover,
+#todoList li.listTitle:active {
+    cursor: default;
+    transform: none;
+}
+
+#todoList .emptySpace {
+    background: #fc3;
+    border: dashed 1px #777;
+    height: 10px;
+}
+
+#todoList li.addItem {
+    display: none;
+    position: absolute;
+    top: 0;
+    background: none;
+}
+
+#todoList ul:hover li.addItem {
+    display: block;
+}
+
+#todoList li.addItem input {
+    width: 100%;
+    padding: 4px;
+}
+
+#todoList li.addItem:active {
+    transform: none;   
+}
+
+#trash {
+    background: rgba(178, 73, 38, 0.7);
+    color: white;
+    height: 200px;
+    width: 400px;
+    margin: 50px auto 0;
+    line-height: 200px;
+    text-align: center;
+}
 
 
 
